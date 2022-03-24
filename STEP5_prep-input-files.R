@@ -10,7 +10,7 @@ library(plyr)
 
 for(i in 1:22)
 {
-  input <- paste("chr",i,".info.gz", sep = "")
+  input <- paste("chr",i,".info", sep = "")
   data <- read.table(input, header = T)
   dat <- subset(data, MAF >= 0.001 & Rsq >= 0.80)
   dat$chr <- ldply(strsplit(as.character(dat$SNP), split = ":"))[[1]]
@@ -21,7 +21,7 @@ for(i in 1:22)
 
 for(i in 1:22)
 {
-  input <- paste("chr",i,".info.gz", sep = "")
+  input <- paste("chr",i,".info", sep = "")
   data <- read.table(input, header = T)
   dat <- subset(data, MAF >= 0.001 & Rsq >= 0.80)
   dat$chr <- ldply(strsplit(as.character(dat$SNP), split = ":"))[[1]]
