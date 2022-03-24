@@ -1,5 +1,5 @@
 ### combine all info files
-cat YOUR_PATH/maf001rsq03minimums_chr*.info | grep -v 'Rsq' > allChrs.Info
+cat YOUR_PATH/maf001rsq08minimums_chr*.info | grep -v 'Rsq' > allChrs.Info
 ### combine all assoc
 cat *chr*_caseControl.SingleWald.assoc | grep -v 'N_INFORMATIVE' > allChrs.assoc
  
